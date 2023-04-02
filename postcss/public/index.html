@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>disclosure-alpinejs</title>
+    <link rel="stylesheet" href="./build/tailwind-output.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+<body class="flex justify-center items-center w-screen  bg-[#a21caf]">
+    <section class="top-9 relative bg-white rounded-xl overflow-hidden flex flex-col justify-center items-center w-1/3 p-2">
+        <div x-data="{ isOpen: false }" class="text-[#4a044e] my-1 flex flex-col  w-full overflow-hidden">
+            <div @click="isOpen = !isOpen" class="px-6 flex justify-between cursor-pointer rounded-md py-2 bg-[#f5d0fe] hover:bg-[#f0abfc]">
+              <button class="font-bold">What is your refund policy?</button>
+              <svg x-show="!isOpen" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+              </svg>
+              <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </div>
+            <p x-show="isOpen" class=" bg-white px-6 py-2">If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked</p>
+        </div>
+        
+        <div x-data="{ isOpen: false }" class=" text-[#4a044e] my-1 flex flex-col  w-full overflow-hidden ">
+            <div @click="isOpen = !isOpen" class="flex justify-between cursor-pointer rounded-md px-6 py-2 bg-[#f5d0fe] hover:bg-[#f0abfc]">
+              <button class="font-bold">Do you offer technical support?</button>
+              <svg x-show="!isOpen" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+              </svg>
+              <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </div>
+            <p x-show="isOpen" class=" bg-white px-6 py-2">No</p>
+        </div>
+    </section>
+</body>
+</html>
